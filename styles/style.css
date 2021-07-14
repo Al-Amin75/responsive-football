@@ -225,6 +225,12 @@ Top 3 Best Footballer
     height: 18px;
     justify-content: center;
  }
+ .logo p{
+     font-size: 18px;
+     font-weight: 400px;
+     margin-top: 0;
+     
+ }
 
  /*-------------
   Media Queries
