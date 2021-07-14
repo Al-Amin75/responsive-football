@@ -16,11 +16,9 @@ main{
 
 .container{
     background-color: #FFFFFF;
-    padding: 30px;
-    margin-top: 70px;
-    
-    
+   margin-top: 70px;
 }
+
 p{
     font-size: 16px;
     font-weight: 400px;
@@ -99,18 +97,22 @@ h1{
     width: 330px;
     height: 256px;
 }
+ .player-detail p{
+    color: rgb(78, 124, 78);
+}
 .player-name{
     font-weight: 700;
     font-size: 28px;
     margin: 16px 0px;
+    color: rgb(25, 73, 25);
 }
 
 
 /*----------
- Top Goal Part 
+ Top 10 Goal Part 
 ----------*/
 
-.top-goal{
+.goals{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -122,12 +124,15 @@ h1{
 #title-color{
     margin-bottom: 0px;
     font-size: 64px;
-    color: blueviolet;
+    color: rgb(146, 43, 206);
 }
 
 .top-goal .goal-type video{
     width: 567px;
     height: 417px;
+}
+.goal-type p{
+    color: rgb(113, 82, 126);
 }
 
 
@@ -220,3 +225,90 @@ Top 3 Best Footballer
     height: 18px;
     justify-content: center;
  }
+
+ /*-------------
+  Media Queries
+   ----------*/
+
+   /*------------- 
+   Mobile Device
+   ----------- */
+
+   @media only screen and (max-width:688px)
+   
+   {
+       /* header  */
+       .header-class{
+        width: 120%;
+       }
+       .header-banner{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header-title{
+        flex-direction: column;
+    }
+    /* player  */
+
+    .container{
+       width: 100%;
+   }
+   .players{
+       grid-template-columns: repeat(1, 1fr);
+   }
+   .player{
+       flex-direction: column;
+   }
+    /* top 10 goal  */
+
+    .top-goal{
+        width: 100%;
+    }
+    .goals{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .goal-type{
+        flex-direction: column;
+    }
+    /* Best footballer */
+
+    .best-footballer{
+        width: 100%;
+    }
+    .Top-best-photo{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .photo-frame{
+        flex-direction: column;
+    }
+    /* Footer  */
+
+    .footer-class{
+        width: 100%;
+    }
+    .logo{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-div{
+        flex-direction: column;
+    }
+}
+
+/*----------------
+ For Tab Divice 
+---------- */
+
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .header-class{
+        width: 120%;
+    }
+    .container, .top-goal , .best-footballer, .footer-class{
+       width: 100%;
+   }
+   .header-banner, .players, .goals, .Top-best-photo, .logo{
+       grid-template-columns: repeat(2, 1fr);
+   }
+   .header-title, .player, .goal-type, .photo-frame, .footer-div{
+       flex-direction: column;
+   }
+    
+}
